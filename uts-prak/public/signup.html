@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main-container mx-auto max-w-[1700px] min-h-screen bg-[url(../img/bg-login.jpg)] bg-cover bg-center bg-no-repeat flex justify-center items-center">
+        <div class="w-[400px] bg-white p-4 rounded-md">
+            <h1 class="text-center mb-10 text-xl font-bold">Sign Up</h1>
+            <form action="" id="register-form">
+                <li class="my-4 list-none">
+                    <input type="text" name="username" id="username" placeholder="Username" class="border-2 border-[#3A4E7F] outline-none rounded px-4 py-1 w-full" required autofocus>
+                </li>
+                <li class="my-4 list-none">
+                    <input type="password" name="password" id="password" placeholder="Password" class="border-2 border-[#3A4E7F] outline-none rounded px-4 py-1 w-full" required>
+                </li>
+                <li class="my-4 list-none">
+                    <input type="password" name="confirm" id="confirm" placeholder="Confirm Password" class="border-2 border-[#3A4E7F] outline-none rounded px-4 py-1 w-full" required>
+                </li>
+                <li class="flex justify-between items-center">
+                    <button id="register" class="bg-[#3A4E7F] hover:bg-[#435ea2] text-white px-4 py-1 rounded">Register</button>
+                    <div class="creat flex">
+                        <p>Have an Account?</p>
+                        <a href="login.html" class="text-sky-500 hover:underline hover:text-sky-700 ml-1">Click Here</a>
+                    </div>
+                </li>
+            </form>
+        </div>
+    </div>
+    <script>
+        if(sessionStorage.username) document.location.href = "index.html";
+
+        const register = document.querySelector("#register-form");
+
+        if(!localStorage.user) localStorage.user = JSON.stringify([]);
+
+        register.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const confirm  = document.getElementById("confirm").value;
+
+            if(password != confirm)
+            {
+                alert("password tidak sama!");
+                return;
+            }
+
+            const user = JSON.parse(localStorage.user);
+            user.push({username, password});;
+
+            localStorage.user = JSON.stringify(user);
+
+            alert("Register Berhasil!");
+            document.location.href = "login.html";
+        })
+    </script>
+</body>
+</html>

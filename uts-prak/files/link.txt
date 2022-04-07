@@ -1,0 +1,8 @@
+link yt
+https://youtu.be/qzbmmZNcVaM
+
+link domain kelas
+https://novaldis.c120.me/uts-prak
+
+link domain netlify
+https://steins-uts-prak-desweb.netlify.app/

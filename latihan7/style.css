@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-areas:  "logo header header"
+                        "nav nav nav"
+                        "content1 content1 sidebar"
+                        "content2 content2 sidebar"
+                        "footer footer footer";
+  grid-template-columns: 1fr 4fr 2fr;
+  grid-template-rows: 1fr 0.5fr 2fr 2fr 0.5fr;
+}
+
+.logo{
+  grid-area: logo;
+}
+
+header{
+  grid-area: header;
+}
+
+nav{
+  grid-area: nav;
+}
+
+.content-1{
+  grid-area: content1;
+}
+
+.content-2{
+  grid-area: content2;
+}
+
+aside{
+  grid-area: sidebar;
+}
+
+footer{
+  grid-area: footer;
+}
+
+.logo,
+header,
+nav,
+.content-1,
+.content-2,
+aside,
+footer {
+  background-color: #FF9F45;
+  color: #fff;
+  padding: 20px;
+  border: 1px solid #fff;
+}

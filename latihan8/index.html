@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novaldi - 2003941 | Latihan 8</title>
+    <style>
+        body{
+            min-height: 100vh;
+        }
+        p{
+            margin: 0;
+        }
+        #ip{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="button">
+            <button type="button" onclick="inputData()">Input Data</button>
+            <button type="button" onclick="changeColor()">Change Color</button>
+            <button type="button" onclick="undoColor()">Undo Color</button>
+        </div>
+        <br>
+        <div id="data"></div>
+    </div>
+    <script>
+        // conver value 0-100 to IP 0-4
+        function conv(mk){
+            if(mk >= 85 && mk <= 100) return 4.0;
+            else if(mk >= 80 && mk < 85) return 3.7;
+            else if(mk >= 75 && mk < 80) return 3.3;
+            else if(mk >= 70 && mk < 75) return 3.0;
+            else if(mk >= 65 && mk < 70) return 2.7;
+            else if(mk >= 60 && mk < 65) return 2.3;
+            else if(mk >= 55 && mk < 60) return 2.0;
+            else if(mk >= 45 && mk < 55) return 1.0;
+            else return 0;
+        }
+        
+        function inputData()
+        {
+            // input data score
+            let nama    = prompt("Masukkan Nama:");
+            let nim     = prompt("Masukkan NIM:");
+            let alpro   = prompt("Masukkan nilai Algoritma Pemrograman (3 sks):");
+            let desweb  = prompt("Masukkan nilai Desain dan Pemrograman Web (3 sks):");
+            let arsikom = prompt("Masukkan nilai Arsitektur dan Organisasi Komputer (3 sks):");
+            let numerik = prompt("Masukkan nilai Metode Numerik (3 sks):");
+            let usaha   = prompt("Masukkan nilai Kemirausahaan (2 sks):");
+            let damin   = prompt("Masukkan nilai Data Mining (2 sks):");
+            let statis  = prompt("Masukkan nilai Statistika (3 sks):");
+            let ml      = prompt("Masukkan nilai Machine Learning (3 sks):");
+
+            // show to html and show ip with average concept
+            document.getElementById("data").innerHTML = "<p>Nama mahasiswa " + nama + " dengan NIM " + nim + " memperoleh Nilai sebagai berikut:</p>" + 
+                                                        "<p>Algoritma Pemrograman : " + alpro + "</p>" + 
+                                                        "<p>Desain dan Pemrograman Web : " + desweb + "</p>" + 
+                                                        "<p>Arsitektur dan Organisasi Komputer : " + arsikom + "</p>" + 
+                                                        "<p>Metode Numerik : " + numerik + "</p>" + 
+                                                        "<p>Kewirausahaan : " + usaha + "</p>" + 
+                                                        "<p>Data Mining : " + damin + "</p>" + 
+                                                        "<p>Statistika : " + statis + "</p>" + 
+                                                        "<p>Machine Learning : " + ml + "</p><br>" + 
+                                                        "<p id='ip'>IP = " + (conv(alpro)*3 + conv(desweb)*3 + conv(arsikom)*3 + conv(numerik)*3 + conv(usaha)*2 + conv(damin)*2 + conv(statis)*3 + conv(ml)*3) / 22 + "</p>";
+        }
+
+        // change attribute style background color of body html
+        function changeColor(){
+            let color = prompt("Enter a color:");
+            document.body.style.backgroundColor = color;
+        }
+
+        // change attribute style background color to default of body html
+        function undoColor(){
+            document.body.style.backgroundColor = null;
+        }
+    </script>
+</body>
+</html>

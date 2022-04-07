@@ -1,0 +1,8 @@
+# extension
+*.exe
+*.rar
+*.zip
+
+# for setting vscode
+**/.vscode
+**/node_modules

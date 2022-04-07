@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if(!sessionStorage.username) document.location.href = "login.html";
+    </script>
+</head>
+<body class="text-[#3A4E7F]">
+    <div class="main-container mx-auto px-10 py-4 max-w-[1700px] font-bold">
+        <nav class="flex justify-between items-center py-4">
+            <div id="logo" class="verytab:basis-1/3 laptop:basis-1/2"><img src="img/Logo.png" alt="Logo" class="w-[150px] minitab:w-[200px]"></div>
+            <div class="menu w-[55%] hidden bg-white verytab:bg-transparent verytab:flex verytab:justify-evenly verytab:items-center verytab:basis-2/3 laptop:basis-1/2 p-4 verytab:p-0 absolute verytab:static left-0 verytab:left-auto top-0 verytab:top-auto h-screen verytab:h-[64px] pt-12 verytab:pt-0 z-10" id="hamb-menu">
+                <a href="index.html" class="minitab:px-6 py-1 block">HOME</a>
+                <a href="products.html" class="px-6 py-1 block text-white bg-[#3A4E7F] rounded">PRODUCTS</a>
+                <a href="contact.html" class="minitab:px-6 py-1 block">CONTACT</a>
+                <button class="minitab:px-6 py-1 block font-bold" onclick="logout()">LOG OUT</button>
+            </div>
+            <div class="ham verytab:hidden cursor-pointer" id="hamb">
+                <ion-icon name="menu-outline" class="text-4xl"></ion-icon>
+            </div>
+        </nav>
+        <div class="flex flex-wrap">
+            <div class="w-full phone:w-1/2 tablet:w-1/3 laptop:w-1/4 p-3">
+                <div class="bg-white rounded-lg overflow-hidden border-2 border-[#3A4E7F]">
+                    <div class="relative pb-36 overflow-hidden">
+                        <img class="absolute inset-0 h-full w-full object-cover" src="img/bali.jpg" alt="">
+                    </div>
+                    <div class="px-4 py-2 h-20 border-t border-b border-[#3A4E7F] b text-xs text-neutral-800">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci tempore tionem, distinctio obcaecati? Repudiandae explicabo!</p>        
+                    </div>
+                    <div class="px-4 py-2 flex justify-between items-center">
+                        <div class="flex items-center text-sm text-yellow-500"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5 fill-current"><path d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z"></path></svg>3.0</div>
+                        <div class="flex items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="save-toggle w-4 h-4 fill-neutral-800 mr-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.095000)" stroke="none"><path d="M973 5105 c-134 -36 -241 -123 -300 -243 l-38 -76 -3 -2275 c-2 -2502 -7 -2330 58 -2420 37 -51 115 -91 177 -91 57 0 133 30 196 78 29 22 347 290 707 597 360 306 669 564 685 573 42 23 188 23 230 0 17 -9 329 -272 695 -584 366 -311 685 -582 710 -600 144 -106 304 -74 374 76 l21 45 3 2275 c3 2542 9 2340 -68 2458 -61 95 -162 166 -271 191 -29 7 -580 10 -1584 10 -1293 0 -1548 -3 -1592 -14z"/></g></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="favorite-toggle w-4 h-5 fill-neutral-800 -mb-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.120000)" stroke="none"><path d="M1140 4665 c-574 -95 -988 -493 -1112 -1069 -32 -147 -31 -417 1 -566 42 -197 129 -392 259 -580 99 -144 172 -230 342 -404 229 -234 457 -432 959 -831 145 -115 423 -337 618 -493 l354 -282 222 178 c122 98 389 310 592 472 636 505 874 709 1125 966 343 352 520 644 591 974 30 140 33 409 5 545 -59 297 -194 548 -400 743 -182 171 -401 284 -661 338 -125 26 -414 27 -533 1 -354 -78 -652 -289 -874 -621 -33 -50 -64 -91 -68 -91 -4 0 -35 41 -69 92 -219 328 -517 540 -866 618 -100 23 -377 28 -485 10z"/></g></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full phone:w-1/2 tablet:w-1/3 laptop:w-1/4 p-3">
+                <div class="bg-white rounded-lg overflow-hidden border-2 border-[#3A4E7F]">
+                    <div class="relative pb-36 overflow-hidden">
+                        <img class="absolute inset-0 h-full w-full object-cover" src="img/kyoto.jpg" alt="">
+                    </div>
+                    <div class="px-4 py-2 h-20 border-t border-b border-[#3A4E7F] b text-xs text-neutral-800">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci tempore tionem, distinctio obcaecati? Repudiandae explicabo!</p>        
+                    </div>
+                    <div class="px-4 py-2 flex justify-between items-center">
+                        <div class="flex items-center text-sm text-yellow-500"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5 fill-current"><path d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z"></path></svg>3.0</div>
+                        <div class="flex items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="save-toggle w-4 h-4 fill-neutral-800 mr-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.095000)" stroke="none"><path d="M973 5105 c-134 -36 -241 -123 -300 -243 l-38 -76 -3 -2275 c-2 -2502 -7 -2330 58 -2420 37 -51 115 -91 177 -91 57 0 133 30 196 78 29 22 347 290 707 597 360 306 669 564 685 573 42 23 188 23 230 0 17 -9 329 -272 695 -584 366 -311 685 -582 710 -600 144 -106 304 -74 374 76 l21 45 3 2275 c3 2542 9 2340 -68 2458 -61 95 -162 166 -271 191 -29 7 -580 10 -1584 10 -1293 0 -1548 -3 -1592 -14z"/></g></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="favorite-toggle w-4 h-5 fill-neutral-800 -mb-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.120000)" stroke="none"><path d="M1140 4665 c-574 -95 -988 -493 -1112 -1069 -32 -147 -31 -417 1 -566 42 -197 129 -392 259 -580 99 -144 172 -230 342 -404 229 -234 457 -432 959 -831 145 -115 423 -337 618 -493 l354 -282 222 178 c122 98 389 310 592 472 636 505 874 709 1125 966 343 352 520 644 591 974 30 140 33 409 5 545 -59 297 -194 548 -400 743 -182 171 -401 284 -661 338 -125 26 -414 27 -533 1 -354 -78 -652 -289 -874 -621 -33 -50 -64 -91 -68 -91 -4 0 -35 41 -69 92 -219 328 -517 540 -866 618 -100 23 -377 28 -485 10z"/></g></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full phone:w-1/2 tablet:w-1/3 laptop:w-1/4 p-3">
+                <div class="bg-white rounded-lg overflow-hidden border-2 border-[#3A4E7F]">
+                    <div class="relative pb-36 overflow-hidden">
+                        <img class="absolute inset-0 h-full w-full object-cover" src="img/papua.jpg" alt="">
+                    </div>
+                    <div class="px-4 py-2 h-20 border-t border-b border-[#3A4E7F] b text-xs text-neutral-800">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci tempore tionem, distinctio obcaecati? Repudiandae explicabo!</p>        
+                    </div>
+                    <div class="px-4 py-2 flex justify-between items-center">
+                        <div class="flex items-center text-sm text-yellow-500"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5 fill-current"><path d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z"></path></svg>3.0</div>
+                        <div class="flex items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="save-toggle w-4 h-4 fill-neutral-800 mr-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.095000)" stroke="none"><path d="M973 5105 c-134 -36 -241 -123 -300 -243 l-38 -76 -3 -2275 c-2 -2502 -7 -2330 58 -2420 37 -51 115 -91 177 -91 57 0 133 30 196 78 29 22 347 290 707 597 360 306 669 564 685 573 42 23 188 23 230 0 17 -9 329 -272 695 -584 366 -311 685 -582 710 -600 144 -106 304 -74 374 76 l21 45 3 2275 c3 2542 9 2340 -68 2458 -61 95 -162 166 -271 191 -29 7 -580 10 -1584 10 -1293 0 -1548 -3 -1592 -14z"/></g></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="favorite-toggle w-4 h-5 fill-neutral-800 -mb-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.120000)" stroke="none"><path d="M1140 4665 c-574 -95 -988 -493 -1112 -1069 -32 -147 -31 -417 1 -566 42 -197 129 -392 259 -580 99 -144 172 -230 342 -404 229 -234 457 -432 959 -831 145 -115 423 -337 618 -493 l354 -282 222 178 c122 98 389 310 592 472 636 505 874 709 1125 966 343 352 520 644 591 974 30 140 33 409 5 545 -59 297 -194 548 -400 743 -182 171 -401 284 -661 338 -125 26 -414 27 -533 1 -354 -78 -652 -289 -874 -621 -33 -50 -64 -91 -68 -91 -4 0 -35 41 -69 92 -219 328 -517 540 -866 618 -100 23 -377 28 -485 10z"/></g></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full phone:w-1/2 tablet:w-1/3 laptop:w-1/4 p-3">
+                <div class="bg-white rounded-lg overflow-hidden border-2 border-[#3A4E7F]">
+                    <div class="relative pb-36 overflow-hidden">
+                        <img class="absolute inset-0 h-full w-full object-cover" src="img/linau.jpg" alt="">
+                    </div>
+                    <div class="px-4 py-2 h-20 border-t border-b border-[#3A4E7F] b text-xs text-neutral-800">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci tempore tionem, distinctio obcaecati? Repudiandae explicabo!</p>        
+                    </div>
+                    <div class="px-4 py-2 flex justify-between items-center">
+                        <div class="flex items-center text-sm text-yellow-500"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5 fill-current"><path d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z"></path></svg>3.0</div>
+                        <div class="flex items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="save-toggle w-4 h-4 fill-neutral-800 mr-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.095000)" stroke="none"><path d="M973 5105 c-134 -36 -241 -123 -300 -243 l-38 -76 -3 -2275 c-2 -2502 -7 -2330 58 -2420 37 -51 115 -91 177 -91 57 0 133 30 196 78 29 22 347 290 707 597 360 306 669 564 685 573 42 23 188 23 230 0 17 -9 329 -272 695 -584 366 -311 685 -582 710 -600 144 -106 304 -74 374 76 l21 45 3 2275 c3 2542 9 2340 -68 2458 -61 95 -162 166 -271 191 -29 7 -580 10 -1584 10 -1293 0 -1548 -3 -1592 -14z"/></g></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="favorite-toggle w-4 h-5 fill-neutral-800 -mb-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.120000)" stroke="none"><path d="M1140 4665 c-574 -95 -988 -493 -1112 -1069 -32 -147 -31 -417 1 -566 42 -197 129 -392 259 -580 99 -144 172 -230 342 -404 229 -234 457 -432 959 -831 145 -115 423 -337 618 -493 l354 -282 222 178 c122 98 389 310 592 472 636 505 874 709 1125 966 343 352 520 644 591 974 30 140 33 409 5 545 -59 297 -194 548 -400 743 -182 171 -401 284 -661 338 -125 26 -414 27 -533 1 -354 -78 -652 -289 -874 -621 -33 -50 -64 -91 -68 -91 -4 0 -35 41 -69 92 -219 328 -517 540 -866 618 -100 23 -377 28 -485 10z"/></g></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full phone:w-1/2 tablet:w-1/3 laptop:w-1/4 p-3">
+                <div class="bg-white rounded-lg overflow-hidden border-2 border-[#3A4E7F]">
+                    <div class="relative pb-36 overflow-hidden">
+                        <img class="absolute inset-0 h-full w-full object-cover" src="img/dubai.jpeg" alt="">
+                    </div>
+                    <div class="px-4 py-2 h-20 border-t border-b border-[#3A4E7F] b text-xs text-neutral-800">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci tempore tionem, distinctio obcaecati? Repudiandae explicabo!</p>        
+                    </div>
+                    <div class="px-4 py-2 flex justify-between items-center">
+                        <div class="flex items-center text-sm text-yellow-500"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5 fill-current"><path d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z"></path></svg>3.0</div>
+                        <div class="flex items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="save-toggle w-4 h-4 fill-neutral-800 mr-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.095000)" stroke="none"><path d="M973 5105 c-134 -36 -241 -123 -300 -243 l-38 -76 -3 -2275 c-2 -2502 -7 -2330 58 -2420 37 -51 115 -91 177 -91 57 0 133 30 196 78 29 22 347 290 707 597 360 306 669 564 685 573 42 23 188 23 230 0 17 -9 329 -272 695 -584 366 -311 685 -582 710 -600 144 -106 304 -74 374 76 l21 45 3 2275 c3 2542 9 2340 -68 2458 -61 95 -162 166 -271 191 -29 7 -580 10 -1584 10 -1293 0 -1548 -3 -1592 -14z"/></g></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="favorite-toggle w-4 h-5 fill-neutral-800 -mb-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.120000)" stroke="none"><path d="M1140 4665 c-574 -95 -988 -493 -1112 -1069 -32 -147 -31 -417 1 -566 42 -197 129 -392 259 -580 99 -144 172 -230 342 -404 229 -234 457 -432 959 -831 145 -115 423 -337 618 -493 l354 -282 222 178 c122 98 389 310 592 472 636 505 874 709 1125 966 343 352 520 644 591 974 30 140 33 409 5 545 -59 297 -194 548 -400 743 -182 171 -401 284 -661 338 -125 26 -414 27 -533 1 -354 -78 -652 -289 -874 -621 -33 -50 -64 -91 -68 -91 -4 0 -35 41 -69 92 -219 328 -517 540 -866 618 -100 23 -377 28 -485 10z"/></g></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full phone:w-1/2 tablet:w-1/3 laptop:w-1/4 p-3">
+                <div class="bg-white rounded-lg overflow-hidden border-2 border-[#3A4E7F]">
+                    <div class="relative pb-36 overflow-hidden">
+                        <img class="absolute inset-0 h-full w-full object-cover" src="img/rinjani.jpeg" alt="">
+                    </div>
+                    <div class="px-4 py-2 h-20 border-t border-b border-[#3A4E7F] b text-xs text-neutral-800">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci tempore tionem, distinctio obcaecati? Repudiandae explicabo!</p>        
+                    </div>
+                    <div class="px-4 py-2 flex justify-between items-center">
+                        <div class="flex items-center text-sm text-yellow-500"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5 fill-current"><path d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z"></path></svg>3.0</div>
+                        <div class="flex items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="save-toggle w-4 h-4 fill-neutral-800 mr-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.095000)" stroke="none"><path d="M973 5105 c-134 -36 -241 -123 -300 -243 l-38 -76 -3 -2275 c-2 -2502 -7 -2330 58 -2420 37 -51 115 -91 177 -91 57 0 133 30 196 78 29 22 347 290 707 597 360 306 669 564 685 573 42 23 188 23 230 0 17 -9 329 -272 695 -584 366 -311 685 -582 710 -600 144 -106 304 -74 374 76 l21 45 3 2275 c3 2542 9 2340 -68 2458 -61 95 -162 166 -271 191 -29 7 -580 10 -1584 10 -1293 0 -1548 -3 -1592 -14z"/></g></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="favorite-toggle w-4 h-5 fill-neutral-800 -mb-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.120000)" stroke="none"><path d="M1140 4665 c-574 -95 -988 -493 -1112 -1069 -32 -147 -31 -417 1 -566 42 -197 129 -392 259 -580 99 -144 172 -230 342 -404 229 -234 457 -432 959 -831 145 -115 423 -337 618 -493 l354 -282 222 178 c122 98 389 310 592 472 636 505 874 709 1125 966 343 352 520 644 591 974 30 140 33 409 5 545 -59 297 -194 548 -400 743 -182 171 -401 284 -661 338 -125 26 -414 27 -533 1 -354 -78 -652 -289 -874 -621 -33 -50 -64 -91 -68 -91 -4 0 -35 41 -69 92 -219 328 -517 540 -866 618 -100 23 -377 28 -485 10z"/></g></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full phone:w-1/2 tablet:w-1/3 laptop:w-1/4 p-3">
+                <div class="bg-white rounded-lg overflow-hidden border-2 border-[#3A4E7F]">
+                    <div class="relative pb-36 overflow-hidden">
+                        <img class="absolute inset-0 h-full w-full object-cover" src="img/tokyo.jpg" alt="">
+                    </div>
+                    <div class="px-4 py-2 h-20 border-t border-b border-[#3A4E7F] b text-xs text-neutral-800">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci tempore tionem, distinctio obcaecati? Repudiandae explicabo!</p>        
+                    </div>
+                    <div class="px-4 py-2 flex justify-between items-center">
+                        <div class="flex items-center text-sm text-yellow-500"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5 fill-current"><path d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z"></path></svg>3.0</div>
+                        <div class="flex items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="save-toggle w-4 h-4 fill-neutral-800 mr-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.095000)" stroke="none"><path d="M973 5105 c-134 -36 -241 -123 -300 -243 l-38 -76 -3 -2275 c-2 -2502 -7 -2330 58 -2420 37 -51 115 -91 177 -91 57 0 133 30 196 78 29 22 347 290 707 597 360 306 669 564 685 573 42 23 188 23 230 0 17 -9 329 -272 695 -584 366 -311 685 -582 710 -600 144 -106 304 -74 374 76 l21 45 3 2275 c3 2542 9 2340 -68 2458 -61 95 -162 166 -271 191 -29 7 -580 10 -1584 10 -1293 0 -1548 -3 -1592 -14z"/></g></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="favorite-toggle w-4 h-5 fill-neutral-800 -mb-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.120000)" stroke="none"><path d="M1140 4665 c-574 -95 -988 -493 -1112 -1069 -32 -147 -31 -417 1 -566 42 -197 129 -392 259 -580 99 -144 172 -230 342 -404 229 -234 457 -432 959 -831 145 -115 423 -337 618 -493 l354 -282 222 178 c122 98 389 310 592 472 636 505 874 709 1125 966 343 352 520 644 591 974 30 140 33 409 5 545 -59 297 -194 548 -400 743 -182 171 -401 284 -661 338 -125 26 -414 27 -533 1 -354 -78 -652 -289 -874 -621 -33 -50 -64 -91 -68 -91 -4 0 -35 41 -69 92 -219 328 -517 540 -866 618 -100 23 -377 28 -485 10z"/></g></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full phone:w-1/2 tablet:w-1/3 laptop:w-1/4 p-3">
+                <div class="bg-white rounded-lg overflow-hidden border-2 border-[#3A4E7F]">
+                    <div class="relative pb-36 overflow-hidden">
+                        <img class="absolute inset-0 h-full w-full object-cover" src="img/singapore.jpg" alt="">
+                    </div>
+                    <div class="px-4 py-2 h-20 border-t border-b border-[#3A4E7F] b text-xs text-neutral-800">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci tempore tionem, distinctio obcaecati? Repudiandae explicabo!</p>        
+                    </div>
+                    <div class="px-4 py-2 flex justify-between items-center">
+                        <div class="flex items-center text-sm text-yellow-500"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5 fill-current"><path d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z"></path></svg>3.0</div>
+                        <div class="flex items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="save-toggle w-4 h-4 fill-neutral-800 mr-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.095000)" stroke="none"><path d="M973 5105 c-134 -36 -241 -123 -300 -243 l-38 -76 -3 -2275 c-2 -2502 -7 -2330 58 -2420 37 -51 115 -91 177 -91 57 0 133 30 196 78 29 22 347 290 707 597 360 306 669 564 685 573 42 23 188 23 230 0 17 -9 329 -272 695 -584 366 -311 685 -582 710 -600 144 -106 304 -74 374 76 l21 45 3 2275 c3 2542 9 2340 -68 2458 -61 95 -162 166 -271 191 -29 7 -580 10 -1584 10 -1293 0 -1548 -3 -1592 -14z"/></g></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="favorite-toggle w-4 h-5 fill-neutral-800 -mb-1"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.120000)" stroke="none"><path d="M1140 4665 c-574 -95 -988 -493 -1112 -1069 -32 -147 -31 -417 1 -566 42 -197 129 -392 259 -580 99 -144 172 -230 342 -404 229 -234 457 -432 959 -831 145 -115 423 -337 618 -493 l354 -282 222 178 c122 98 389 310 592 472 636 505 874 709 1125 966 343 352 520 644 591 974 30 140 33 409 5 545 -59 297 -194 548 -400 743 -182 171 -401 284 -661 338 -125 26 -414 27 -533 1 -354 -78 -652 -289 -874 -621 -33 -50 -64 -91 -68 -91 -4 0 -35 41 -69 92 -219 328 -517 540 -866 618 -100 23 -377 28 -485 10z"/></g></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const hamb = document.getElementById("hamb");
+        const hambMenu = document.querySelector("#hamb-menu");
+
+        hamb.addEventListener("click", () => {
+            hambMenu.classList.toggle("hidden");
+        });
+
+        function logout()
+        {
+            sessionStorage.removeItem("username");
+            document.location.href = "login.html";
+        }
+    </script>
+    <script>
+        const favorite = document.querySelectorAll(".favorite-toggle");
+        const save = document.querySelectorAll(".save-toggle");
+        let suka = 0;
+        let simpan = 0;
+
+        favorite.forEach(item => {
+            item.addEventListener("click", function(){
+                if(this.classList.contains("fill-neutral-800")){
+                    this.classList.remove("fill-neutral-800");
+                    this.classList.add("fill-red-600");
+                    suka++;
+                }
+                else{
+                    this.classList.remove("fill-red-600");
+                    this.classList.add("fill-neutral-800");
+                    suka--;
+                }
+                alert("List sukamu sekarang ada : " + suka);
+            });
+        });
+
+        save.forEach(item => {
+            item.addEventListener("click", function(){
+                if(this.classList.contains("fill-neutral-800")){
+                    this.classList.remove("fill-neutral-800");
+                    this.classList.add("fill-blue-700");
+                    simpan++;
+                }
+                else{
+                    this.classList.remove("fill-blue-700");
+                    this.classList.add("fill-neutral-800");
+                    simpan--;
+                }
+                alert("List simpanmu sekarang ada : " + simpan);
+            });
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

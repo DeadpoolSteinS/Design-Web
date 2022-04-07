@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novaldi - 2003941 | Tugas 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Biodata</h1>
+        <div id="form">
+            <li>
+                <label for="name">Nama Lengkap</label><br>
+                <input type="text" name="name" id="name" autofocus>
+            </li>
+            <li>
+                <label for="born">Tanggal Lahir</label><br>
+                <input type="date" name="born" id="born">
+            </li>
+            <li>
+                <label for="sex">Jenis Kelamin</label><br>
+                <div class="option">
+                    <input type="radio" name="sex" id="sex1" value="Laki-laki">
+                    <label for="sex1">Laki-laki</label>
+                    <input type="radio" name="sex" id="sex2" value="Perempuan">
+                    <label for="sex2">Perempuan</label>
+                    <input type="radio" name="sex" id="sex3" value="Other">
+                    <label for="sex3">Other</label>
+                </div>
+            </li>
+            <li>
+                <label for="interest">Hobi</label><br>
+                <div class="option">
+                    <input type="checkbox" name="interest" id="interest1" value="Ngoding">
+                    <label for="interest1">Ngoding</label>
+                    <input type="checkbox" name="interest" id="interest2" value="Rebahan">
+                    <label for="interest2">Rebahan</label>
+                    <input type="checkbox" name="interest" id="interest3" value="Melamun">
+                    <label for="interest3">Melamun</label>
+                    <input type="checkbox" name="interest" id="interest4" value="Baca Buku">
+                    <label for="interest4">Baca Buku</label>
+                    <input type="checkbox" name="interest" id="interest5" value="Nonton Youtube">
+                    <label for="interest5">Nonton Youtube</label>
+                    <input type="checkbox" name="interest" id="interest6" value="Dengerin Lagu">
+                    <label for="interest6">Dengerin Lagu</label>
+                    <input type="checkbox" name="interest" id="interest7" value="Other">
+                    <label for="interest7">Other</label>
+                </div>
+            </li>
+            <li>
+                <label for="religion">Agama</label><br>
+                <input type="text" name="religion" id="religion">
+            </li>
+            <li>
+                <label for="message">Pesan</label><br>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </li>
+            <button type="submit" onclick="getData()">Submit</button>
+        </div>
+        <div id="result">
+            <div>
+                <p class="const">Label</p>
+                <p class="const">Value</p>
+            </div>
+            <div>
+                <p class="const">Name</p>
+                <p class="change text"></p>
+            </div>
+            <div>
+                <p class="const">Tanggal Lahir</p>
+                <p class="change text"></p>
+            </div>
+            <div>
+                <p class="const">Jenis Kelamin</p>
+                <p class="change text"></p>
+            </div>
+            <div>
+                <p class="const">Hobi</p>
+                <p class="change"></p>
+            </div>
+            <div>
+                <p class="const">Agama</p>
+                <p class="change text"></p>
+            </div>
+            <div>
+                <p class="const">Pesan</p>
+                <p class="change text"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
