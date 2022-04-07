@@ -14,6 +14,7 @@ function select($query)
     return $rows;
 }
 
+// for filter select from key search
 if(isset($_POST["key"]))
 {
     $key = $_POST["key"];
