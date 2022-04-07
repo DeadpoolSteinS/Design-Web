@@ -18,7 +18,7 @@ $id = $_GET["id"];
 if(isset($_POST["key"]))
 {
     $key = $_POST["key"];
-    $data = select("SELECT * FROM detail WHERE year LIKE '%$key%' OR company LIKE '%$key' OR field LIKE '%$key%' OR description LIKE '%$key%' AND id_riwayat=$id ORDER BY year ASC");
+    $data = select("SELECT * FROM detail WHERE year LIKE '%$key%' OR company LIKE '%$key%' OR field LIKE '%$key%' OR description LIKE '%$key%' AND id_riwayat=$id ORDER BY year ASC");
 }
 else $data = select("SELECT * FROM detail WHERE id_riwayat=$id ORDER BY year ASC");
 ?>

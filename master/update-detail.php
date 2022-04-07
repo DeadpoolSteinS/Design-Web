@@ -1,6 +1,7 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "design_web");
 
+// get database
 function select($query)
 {
     global $conn;
