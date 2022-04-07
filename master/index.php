@@ -17,6 +17,7 @@ function select($query)
 // for filter select from key search
 if(isset($_POST["key"]))
 {
+    // get key value
     $key = $_POST["key"];
     $data = select("SELECT * FROM riwayat WHERE name LIKE '%$key%' OR address LIKE '%$key' OR telp LIKE '%$key%' OR email LIKE '%$key%' OR study LIKE '%$key%'");
 }
